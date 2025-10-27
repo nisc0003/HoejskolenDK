@@ -4,63 +4,146 @@ import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
-import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
 ---
-<MainLayout title="Titel">
-	<main class="container mx-auto p-4">
-		<Heading htmlheading="h1" size="large">Komponentbibliotek</Heading>
-        <Text stylingclasses="italic">Her kan du finde alle de komponenter, der er brugt i dette projekt.</Text>
-        <hr class="my-4" />
-         <!-- start på typografi -->
-        <section>
-            <Heading htmlheading="h2" size="medium">Typografi & ovesrkrifter</Heading>
-            <Text>Her kan du finde alle de komponenter, der er brugt i dette projekt.</Text>
-            <Heading htmlheading="h1" size="large">h1 - large - sans</Heading>
-            <Heading htmlheading="h2" size="medium">h2 - medium - sans</Heading>
-            <Heading htmlheading="h3" size="small">h3 - small - sans</Heading>
-            <Heading htmlheading="h1" size="large" font="serif">h1 - large - serif</Heading>
-            <Heading htmlheading="h2" size="medium" font="serif">h2 - medium - serif</Heading>
-            <Heading htmlheading="h3" size="small" font="serif">h3 - small - serif</Heading>
-            <Heading htmlheading="h3" size="large" font="display">h3 - large - display</Heading>
-            <Text teksttype="brødtekst">
-            Her er en sektion brødtekst: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem doloremque commodi eaque quisquam quasi recusandae veniam. Corporis totam <Link href="#">Default link: </Link> reiciendis quibusdam ratione iure aut, numquam tenetur voluptatem exercitationem sequi enim!
-            </Text>
-            <Text teksttype="konsultativ">
-            Her en sektion konsultativ tekst: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem doloremque commodi eaque quisquam quasi recusandae veniam. Corporis totam reiciendis quibusdam ratione iure aut, numquam tenetur voluptatem exercitationem sequi enim!
-            </Text>
-            <Text teksttype="brødtekst" stylingclasses="italic">
-            Her er en sektion brødtekst med ekstra css: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem doloremque commodi eaque quisquam quasi recusandae veniam. Corporis totam <Link href="#">Default link: </Link> reiciendis quibusdam ratione iure aut, numquam tenetur voluptatem exercitationem sequi enim!
-            </Text>
-        </section>
-        <!-- slut på typografi -->
-        <hr class="my-4" />
-        <!-- Link komponent instanser -->
-        <section>
-            <Heading htmlheading="h2" size="medium">Links</Heading>
-            <Text teksttype="brødtekst"><Link href="#">Default link: </Link>Default linket er en del af en tekst, og burde gerne fungere som et <Link href="#">link</Link> i en paragraf.</Text>
-            <Text><Link href="#" variant="primary">Link variant: primary</Link></Text>
-            <Text><Link href="#" variant="primary" size="small">Link variant: primary size small</Link></Text>
-            <Text><Link href="#" variant="primary" size="medium">Link variant: primary size medium</Link></Text>
-            <Text><Link href="#" variant="primary" size="large">Link variant: primary size large</Link></Text>
-            <Text><Link href="#" variant="secondary" size="small">Link variant: secondary size small</Link></Text>
-            <Text><Link href="#" variant="secondary" size="medium">Link variant: secondary size medium</Link></Text>
-            <Text><Link href="#" variant="secondary" size="large">Link variant: secondary size large</Link></Text>
-        </section>
-        <!-- Slut på Link komponent instanser -->
-         <hr class="my-4" />
-        <!-- Buttons komponent instanser -->
-        <section>
-            <Heading htmlheading="h2" size="medium">Buttons</Heading>
-            <Text><Button>Default knap</Button></Text>
-            <Text><Button variant="primary">Button variant: primary</Button></Text>
-            <Text><Button variant="primary" size="small">Button variant: primary size small</Button></Text>
-            <Text><Button variant="primary" size="medium">Button variant: primary size medium</Button></Text>
-            <Text><Button variant="primary" size="large">Button variant: primary size large</Button></Text>
-            <Text><Button variant="secondary" size="small">Button variant: secondary size small</Button></Text>
-            <Text><Button variant="secondary" size="medium">Button variant: secondary size medium</Button></Text>
-            <Text><Button variant="secondary" size="large">Variant: secondary size large</Button></Text>
-        </section>
-        <!-- Slut på Buttons komponent instanser -->
-	</main>
+
+<MainLayout title="Komponentbibliotek">
+  <main class="container mx-auto p-4 space-y-12">
+    <!-- Hovedtitel -->
+    <section class="space-y-2">
+      <Heading htmlheading="h1" weight="medium">Komponentbibliotek</Heading>
+      <Text stylingclasses="italic"
+        >Oversigt over alle heading- og tekstkomponenter brugt i projektet.</Text
+      >
+    </section>
+
+    <hr class="border-gray-300" />
+
+    <!-- Headings & Subtitles -->
+    <section class="space-y-6">
+      <Heading htmlheading="h2" weight="medium">Headings & Subtitles</Heading>
+
+      <div class="flex flex-col gap-6">
+        <!-- H1 -->
+        <div class="flex flex-col gap-1">
+          <Heading htmlheading="h1">Heading_1 — standard</Heading>
+          <Heading htmlheading="h1" font="serif" weight="bold"
+            >Heading_1 — alternativ</Heading
+          >
+        </div>
+
+        <!-- H2 -->
+        <div class="flex flex-col gap-1">
+          <Heading htmlheading="h2">Heading_2 — standard</Heading>
+          <Heading htmlheading="h2" font="serif" weight="bold"
+            >Heading_2 — alternativ</Heading
+          >
+        </div>
+
+        <!-- H3 -->
+        <div class="flex flex-col gap-1">
+          <Heading htmlheading="h3">Heading_3 — standard</Heading>
+          <Heading htmlheading="h3" font="display" weight="medium"
+            >Heading_3 — alternativ</Heading
+          >
+        </div>
+
+        <!-- H4 -->
+        <div class="flex flex-col gap-1">
+          <Heading htmlheading="h4">Heading_4 — standard</Heading>
+          <Heading htmlheading="h4" font="uber" weight="medium"
+            >Heading_4 — alternativ</Heading
+          >
+        </div>
+
+        <!-- Subtitle_1 -->
+        <div class="flex flex-col gap-1">
+          <Heading htmlheading="h5">Subtitle_1 — standard</Heading>
+          <Heading htmlheading="h5" font="serif" weight="medium"
+            >Subtitle_1 — alternativ</Heading
+          >
+        </div>
+
+        <!-- Subtitle_2 -->
+        <div class="flex flex-col gap-1">
+          <Heading htmlheading="h6">Subtitle_2 — standard</Heading>
+          <Heading htmlheading="h6" font="display" weight="medium"
+            >Subtitle_2 — alternativ</Heading
+          >
+        </div>
+      </div>
+    </section>
+
+    <hr class="border-gray-300" />
+
+    <!-- Text Types -->
+    <section class="space-y-4">
+      <Heading htmlheading="h2" weight="medium">Text Types</Heading>
+
+      <div class="flex flex-col gap-3">
+        <Text type="body_1">body_1 — standard</Text>
+        <Text type="body_1" font="condensed">body_1 — alternative</Text>
+
+        <Text type="body_2">body_2 — standard</Text>
+        <Text type="body_2" weight="bold">body_2 — alternative</Text>
+
+        <Text type="caption">caption — standard</Text>
+        <Text type="caption" weight="bold" font="display"
+          >caption — alternative</Text
+        >
+      </div>
+    </section>
+
+    <hr class="border-gray-300" />
+
+    <!-- Links -->
+    <section class="space-y-4">
+      <Heading htmlheading="h2" weight="medium">Links</Heading>
+      <!-- <div class="flex flex-col gap-2">
+        <Text><Link href="#">Default link</Link> — integreret i brødtekst</Text>
+        <Text><Link href="#" variant="primary">Primary link</Link></Text>
+        <Text
+          ><Link href="#" variant="primary" size="small">Primary small</Link
+          ></Text
+        >
+        <Text
+          ><Link href="#" variant="primary" size="medium">Primary medium</Link
+          ></Text
+        >
+        <Text
+          ><Link href="#" variant="primary" size="large">Primary large</Link
+          ></Text
+        >
+        <Text
+          ><Link href="#" variant="secondary" size="small">Secondary small</Link
+          ></Text
+        >
+        <Text
+          ><Link href="#" variant="secondary" size="medium"
+            >Secondary medium</Link
+          ></Text
+        >
+        <Text
+          ><Link href="#" variant="secondary" size="large">Secondary large</Link
+          ></Text
+        >
+      </div> -->
+    </section>
+
+    <hr class="border-gray-300" />
+
+    <!-- Buttons -->
+    <section class="space-y-4">
+      <Heading htmlheading="h2" weight="medium">Buttons</Heading>
+      <div class="flex flex-wrap gap-4">
+        <!-- <Button>Default</Button>
+        <Button variant="primary">Primary</Button>
+        <Button variant="primary" size="small">Primary small</Button>
+        <Button variant="primary" size="medium">Primary medium</Button>
+        <Button variant="primary" size="large">Primary large</Button>
+        <Button variant="secondary" size="small">Secondary small</Button>
+        <Button variant="secondary" size="medium">Secondary medium</Button>
+        <Button variant="secondary" size="large">Secondary large</Button> -->
+      </div>
+    </section>
+  </main>
 </MainLayout>

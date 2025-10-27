@@ -1,20 +1,75 @@
 ---
-// Henter parametrene fra Astro.props
-const { htmlheading="h2", size="medium", font="sans", stylingclasses=""} = Astro.props; 
+/*
+  Props:
+    htmlheading: h1, h2, h3, h4, h5, h6
+    type: optional override for size (Heading_1, Heading_2, ..., subtitle_2)
+    font: display / uber / condensed / sans
+    weight: light / regular / medium / bold
+    stylingclasses: ekstra Tailwind-classes
+*/
+const {
+  htmlheading = "h2",
+  type,
+  font = "display",
+  stylingclasses = "",
+  weight = "medium",
+} = Astro.props;
+
 const Htmlheading = htmlheading;
- 
-//Definer den styling (Tailwind classes), der gør sig gældende for de forskellige størrelser.
-const sizeClasses = {
-"large": "text-3xl lg:text-6xl",
-"medium": "text-2xl lg:text-3xl",
-"small": "text-xl",
+
+// Map html headings to default types
+const defaultTypeMap = {
+  h1: "Heading_1",
+  h2: "Heading_2",
+  h3: "Heading_3",
+  h4: "Heading_4",
+  h5: "subtitle_1",
+  h6: "subtitle_2",
 };
 
-//Definer den styling (Tailwind classes), der gør sig gældende for de forskellige skrifttyper.
+// Use type prop if provided, else map from HTML tag
+const finalType = type || defaultTypeMap[htmlheading];
+
+// Tailwind classes for Figma-proportioned headings/subtitles
+const typeClasses = {
+  Heading_1:
+    "text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[9rem] large:text-[10rem]",
+  Heading_2:
+    "text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[5.5rem] large:text-[6.5rem]",
+  Heading_3:
+    "text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-[4rem] large:text-[5rem]",
+  Heading_4:
+    "text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-[3rem] large:text-[4rem]",
+  subtitle_1:
+    "text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-[2.5rem] large:text-[3rem]",
+  subtitle_2:
+    "text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-[1.75rem] large:text-[2rem]",
+};
+
+// Font classes
 const fontClasses = {
-"display": "font-display",
-"sans": "font-sans",
-"serif": "font-serif",
+  display: "font-display",
+  uber: "font-uber",
+  sans: "font-sans",
+  condensed: "font-condensed",
+};
+
+// Weight classes
+const weightClasses = {
+  light: "font-light",
+  regular: "font-normal",
+  medium: "font-medium",
+  bold: "font-bold",
 };
 ---
-<Htmlheading class:list={[stylingclasses, sizeClasses[size], fontClasses[font]]}><slot /></Htmlheading>
+
+<Htmlheading
+  class:list={[
+    stylingclasses,
+    typeClasses[finalType],
+    fontClasses[font],
+    weightClasses[weight],
+  ]}
+>
+  <slot />
+</Htmlheading>

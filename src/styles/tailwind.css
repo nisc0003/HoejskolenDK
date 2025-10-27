@@ -16,11 +16,28 @@
   --color-secondary-500: #f5a600;
   --color-secondary-600: #f57a00;
 
-  /*Typografi */
+  /* ✍️ Typography */
   --font-display: "azo-sans-web", sans-serif;
   --font-uber: "azo-sans-uber", sans-serif;
   --font-sans: "roboto", sans-serif;
   --font-condensed: "roboto-condensed", sans-serif;
+
+  /* 🌐 Override Tailwind's default breakpoints (custom 5-tier system) */
+
+  /* ≈ 480px — small phones */
+  --breakpoint-sm: 30em;
+
+  /* ≈ 768px — tablets, small laptops */
+  --breakpoint-md: 48em;
+
+  /* ≈ 1024px — laptops, small desktops */
+  --breakpoint-lg: 64em;
+
+  /* ≈ 1280px — Full HD screens */
+  --breakpoint-xl: 80em;
+
+  /* ≈ 1536px — large / 1440p+ / 4K */
+  --breakpoint-2xl: 96em;
 }
 
 @layer base {
