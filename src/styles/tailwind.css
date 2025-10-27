@@ -9,12 +9,17 @@
   /* Her tilføjes theme variable // tokens */
 
   /*Farver */
-  --color-primary-400: #00e4f5;
-  --color-primary-500: #006269;
-  --color-primary-600: #006d75;
-  --color-secondary-400: #f5e400;
-  --color-secondary-500: #f5a600;
-  --color-secondary-600: #f57a00;
+  /* ___________________________________________primary____ */
+  --color-primary: #ff5900;
+  --color-primary-muted: #ffc39b;
+  --color-primary-see-thru: rgba(255, 89, 0, 0.5);
+  /* ___________________________________________secondary____ */
+  --color-secondary: #0491dd;
+  --color-secondary-muted: #c6dfe7;
+  /* ___________________________________________background_text_osv____ */
+  --color-background: #f6f3ea;
+  --color-black: #191919;
+  --color-white: #fbfbff;
 
   /* ✍️ Typography */
   --font-display: "azo-sans-web", sans-serif;
