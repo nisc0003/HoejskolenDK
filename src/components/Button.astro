@@ -17,6 +17,15 @@ const sizeClasses = {
 "medium": "text-xl",
 "small": "text-large"
 };
+
+//Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog mængder af radius på knappen.
+const borderRadiusClasses = {
+"large": "rounded-90",
+"medium": "rounded-45",
+"small": "rounded-0"
+};
+
+
 ---
 <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
-<button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}><slot /></button>
+<button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size], borderRadiusClasses[size]]}><slot /></button>

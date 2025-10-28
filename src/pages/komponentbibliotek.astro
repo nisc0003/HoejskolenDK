@@ -135,15 +135,58 @@ import Button from "../components/Button.astro";
     <section class="space-y-4">
       <Heading htmlheading="h2" weight="medium">Buttons</Heading>
       <div class="flex flex-wrap gap-4">
-        <!-- <Button>Default</Button>
+        <Button>Default</Button>
         <Button variant="primary">Primary</Button>
         <Button variant="primary" size="small">Primary small</Button>
         <Button variant="primary" size="medium">Primary medium</Button>
         <Button variant="primary" size="large">Primary large</Button>
         <Button variant="secondary" size="small">Secondary small</Button>
         <Button variant="secondary" size="medium">Secondary medium</Button>
-        <Button variant="secondary" size="large">Secondary large</Button> -->
+        <Button variant="secondary" size="large">Secondary large</Button>
+        <!-- <Button variant="primary" size="small" class:list={[borderRadiusClasses["small"]]}>Rounded small</Button>
+        <Button variant="primary" size="medium" class:list={[borderRadiusClasses["medium"]]}>Rounded medium</Button>
+        <Button variant="primary" size="large" class:list={[borderRadiusClasses["large"]]}>Rounded large</Button> -->
       </div>
     </section>
+
+    <hr class="border-gray-300" />
+
+    <!-- Colors -->
+    <section class="space-y-4">
+      <Heading htmlheading="h2" weight="medium">Colors</Heading>
+          <hr class="border-gray-300" />
+      <div class="flex flex-wrap gap-4">
+        <Heading htmlheading="h2" weight="medium">Primary colors variants</Heading>
+        <div class="bg-primary h-auto w-auto"> <Heading htmlheading="h1">Primary:#ff5900</Heading></div>
+        <div class="bg-primary-muted h-auto w-auto"> <Heading htmlheading="h2">Primary-muted:#ffc39b</Heading></div>
+        <div class="bg-primary-see-thru h-auto w-auto"> <Heading htmlheading="h3">Primary-see-thru:rgba(255, 89, 0, 0.5)</Heading></div>
+      </div>
+    <hr class="border-gray-300" />
+      <div class="flex flex-wrap gap-4">
+        <Heading htmlheading="h2" weight="medium">Secondary colors variants</Heading>
+        <div class="bg-secondary h-auto w-auto"> <Heading htmlheading="h1">Secondary:#00bfff</Heading></div>
+        <div class="bg-secondary-muted h-auto w-auto"> <Heading htmlheading="h2">Secondary-muted:#99ccff</Heading></div>
+      </div>
+    <hr class="border-gray-300" />
+      <div class="flex flex-wrap gap-4">
+        <Heading htmlheading="h2" weight="medium">Color for text</Heading>
+        <div class="bg-background h-auto w-auto"> <Heading htmlheading="h1">Color background:#f6f3ea</Heading></div>
+        <div class="bg-black h-auto w-auto"> <Heading htmlheading="h2">Black text:#191919</Heading></div>
+        <div class="bg-white h-auto w-auto"> <Heading htmlheading="h3">White text:#fbfbff</Heading></div>
+      </div>
+          <hr class="border-gray-300" />
+    </section>
+
+        <!-- Typography -->
+    <section class="space-y-4">
+      <Heading htmlheading="h2" weight="medium">Typography</Heading>
+      <div class="flex flex-col gap-4">
+        <p class="font-display">Font Display: Azo</p>
+        <p class="font-uber">Font: Azo-Uber</p>
+        <p class="font-sans">Font: Roboto</p>
+        <p class="font-condensed">Font: Roboto Condensed</p>
+      </div>
+    </section>
+
   </main>
 </MainLayout>
