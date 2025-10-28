@@ -1,0 +1,163 @@
+---
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import Button from "../components/Button.astro";
+---
+
+<section class="card">
+    <div class="title_icon">
+        <Heading htmlheading="h4" weight="medium">Højskole i Brasilien, Colombia, Costa Rica & Mexico</Heading>
+        <img src="/src/assets/images/flip.svg" alt="LUN Icon" width="40" height="40"/>
+    </div>
+
+    <div>
+        <img src="/src/assets/images/rejse.jpg" class="img" alt="">
+    </div>
+
+    <div class="duration">
+        <Text htmltag="p" stylingclasses="text-lg font-medium">Varighed: ca. 60 dage</Text>
+
+    </div>
+
+    <section class="flex3_info">
+
+        <div class="status">
+            <Text type="body_1">Status</Text>
+
+            <div class="circle_status">
+                <img src="/src/assets/images/orange.svg" alt="">
+                <Text type="body2">Sidste chance!</Text>
+            </div>
+
+            <div class="circle_status">
+                <img src="/src/assets/images/green.svg" alt="">
+                <Text type="body2">Ledige pladser</Text>
+            </div>
+
+            
+            <div class="circle_status">
+                <img src="/src/assets/images/green.svg" alt="">
+                <Text type="body2">Ledige pladser</Text>
+            </div>
+
+            
+            <div class="circle_status">
+                <img src="/src/assets/images/green.svg" alt="">
+                <Text type="body2">Ledige pladser</Text>
+            </div>
+
+        </div>
+
+        <div class="date">
+                        <Text type="body_1">AFREJSE</Text>
+
+                <Text type="body2">17. Jan 2026</Text>
+
+                <Text type="body2">7. Jan 2027</Text>
+
+                <Text type="body2">22. Feb 2027</Text>
+ 
+                <Text type="body2">14 April 2027</Text>
+
+        </div>
+
+        <div class="price">
+                <Text type="body_1">PRIS</Text>
+
+                <Text type="body2">86.000DKK</Text>
+
+                <Text type="body2">87.000DKK</Text>
+
+                <Text type="body2">88.000DKK</Text>
+ 
+                <Text type="body2">89.999DKK</Text>
+
+        </div>
+
+    </section>
+
+        <div class="card_btn">
+        <Button variant="card_btn" size="large">
+        <Text>Læs mere</Text>
+        <img src="/src/assets/images/nextArrow.svg" alt="">
+        </Button>
+        </div>
+
+</section>
+
+<style>
+
+    .card{
+    display: inline-flex;
+    height: 515px;
+    width: 405px;
+    padding: 5px 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #FBFBFF;
+    overflow: auto; 
+    }
+
+
+    .title_icon{
+    display: flex;
+    height: 55px;
+    padding: 0 10px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    align-self: stretch;
+    margin-bottom: 70px;
+}
+
+    .img{
+    width: 385px;
+    height: 242px;
+    flex-shrink: 0;
+    aspect-ratio: 35/22;
+    border-radius: 16px;
+    }
+
+    .duration{
+        display: flex;
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        align-self: stretch;
+    }
+
+    .flex3_info{
+    display: flex;
+    width: 385px;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    .status, .price, .date{
+        display: flex;
+        width: 107px;
+        height: 155px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        flex-shrink: 0;
+    }
+
+    .circle_status{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        align-self: stretch;
+    }
+
+    .card_btn{
+        margin-top: 100px;
+    }
+
+</style>

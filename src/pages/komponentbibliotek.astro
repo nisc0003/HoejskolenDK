@@ -4,6 +4,8 @@ import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
+import Card2LUN from "../components/Card2_LUN.astro";
+import Card3LUN from "../components/Card3_LUN.astro";
 ---
 
 <MainLayout title="Komponentbibliotek">
@@ -144,6 +146,7 @@ import Button from "../components/Button.astro";
         <Button variant="secondary" size="medium">Secondary medium</Button>
         <Button variant="secondary" size="large">Secondary large</Button>
         <Button variant="sub_nav" size="large">Sub Nav BTN</Button>
+        <Button variant="card_btn" size="large">Card BTN</Button>
         <!-- <Button variant="primary" size="small" class:list={[borderRadiusClasses["small"]]}>Rounded small</Button>
         <Button variant="primary" size="medium" class:list={[borderRadiusClasses["medium"]]}>Rounded medium</Button>
         <Button variant="primary" size="large" class:list={[borderRadiusClasses["large"]]}>Rounded large</Button> -->
@@ -176,6 +179,9 @@ import Button from "../components/Button.astro";
         <div class="bg-white h-auto w-auto"> <Heading htmlheading="h3">White text:#fbfbff</Heading></div>
       </div>
           <hr class="border-gray-300" />
+
+          <div> </div>
+
     </section>
 
         <!-- Typography -->
@@ -186,6 +192,15 @@ import Button from "../components/Button.astro";
         <p class="font-uber">Font: Azo-Uber</p>
         <p class="font-sans">Font: Roboto</p>
         <p class="font-condensed">Font: Roboto Condensed</p>
+      </div>
+    </section>
+        <hr class="border-gray-300" />
+        <!-- Cards -->
+    <section class="space-y-4">
+      <Heading htmlheading="h2" weight="medium">Cards</Heading>
+      <div class="flex flex-col gap-4">
+        <Card2LUN />
+        <Card3LUN />
       </div>
     </section>
 
