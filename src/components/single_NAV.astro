@@ -1,0 +1,25 @@
+---
+import Text from "../components/Text.astro";
+import Button from "../components/Button.astro";
+---
+
+<section class="single_nav">
+    <Button variant="sub_nav" size="large">OVERBLIK</Button>
+    <Button variant="sub_nav" size="large">PROGRAM</Button>
+    <Button variant="sub_nav" size="large">INKLUDERET</Button>
+    <Button variant="sub_nav" size="large">FAG</Button>
+    <Button variant="sub_nav" size="large">KONTAKT</Button>
+</section>
+
+<style>
+    .single_nav{
+        display: flex;
+        flex-direction: column;
+        /* Putter den i column lige PT fordi jeg ikke ved hvordan jeg giver den en fixed width...? */
+        /* flex-direction: row; */
+        width: auto;
+        height: auto;
+    }
+
+
+</style>

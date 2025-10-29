@@ -6,6 +6,7 @@ import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
 import Card2LUN from "../components/Card2_LUN.astro";
 import Card3LUN from "../components/Card3_LUN.astro";
+import SingleNAV from "../components/single_NAV.astro";
 ---
 
 <MainLayout title="Komponentbibliotek">
@@ -147,6 +148,8 @@ import Card3LUN from "../components/Card3_LUN.astro";
         <Button variant="secondary" size="large">Secondary large</Button>
         <Button variant="sub_nav" size="large">Sub Nav BTN</Button>
         <Button variant="card_btn" size="large">Card BTN</Button>
+
+
         <!-- <Button variant="primary" size="small" class:list={[borderRadiusClasses["small"]]}>Rounded small</Button>
         <Button variant="primary" size="medium" class:list={[borderRadiusClasses["medium"]]}>Rounded medium</Button>
         <Button variant="primary" size="large" class:list={[borderRadiusClasses["large"]]}>Rounded large</Button> -->
@@ -202,6 +205,14 @@ import Card3LUN from "../components/Card3_LUN.astro";
         <Card2LUN />
         <Card3LUN />
       </div>
+    </section>
+
+        <hr class="border-gray-300" />
+
+           <!-- Navigation -->
+    <section class="space-y-4">
+      <Heading htmlheading="h2" weight="medium">Navigation menus</Heading>
+      <SingleNAV />
     </section>
 
   </main>
