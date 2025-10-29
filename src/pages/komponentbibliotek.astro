@@ -8,6 +8,9 @@ import Card2LUN from "../components/Card2_LUN.astro";
 import Card3LUN from "../components/Card3_LUN.astro";
 import Card_BLOG from "../components/Card_BLOG.astro";
 import SingleNAV from "../components/single_NAV.astro";
+import Overblik from "../components/overblik.astro";
+import Program from "../components/program.astro";
+import Inkluderet from "../components/inkluderet.astro";
 ---
 
 <MainLayout title="Komponentbibliotek">
@@ -199,7 +202,8 @@ import SingleNAV from "../components/single_NAV.astro";
         <p class="font-condensed">Font: Roboto Condensed</p>
       </div>
     </section>
-        <hr class="border-gray-300" />
+        <hr class="border-gray-300 " />
+
         <!-- Cards -->
     <section class="space-y-4">
       <Heading htmlheading="h2" weight="medium">Cards</Heading>
@@ -212,11 +216,32 @@ import SingleNAV from "../components/single_NAV.astro";
 
         <hr class="border-gray-300" />
 
+        <div class="grid ">
            <!-- Navigation -->
     <section class="space-y-4">
       <Heading htmlheading="h2" weight="medium">Navigation menus</Heading>
       <SingleNAV />
     </section>
+    </div>
+            <hr class="border-gray-300 h-min-100" />
+
+          <!-- Single Nav components
+  <section class="space-y-10">
+    <Heading htmlheading="h2" weight="medium">Single Nav components</Heading>
+    <div>
+    <Overblik>
+    <Program>
+    </div>
+  </section> -->
+
+            <!-- Single Nav components -->
+
+      <!-- <Overblik> -->
+      <!-- <Program> -->
+      <Inkluderet>
+ 
+
+    
 
   </main>
 </MainLayout>
