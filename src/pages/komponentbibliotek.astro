@@ -12,7 +12,7 @@ import Overblik from "../components/overblik.astro";
 import Program from "../components/program.astro";
 import Inkluderet from "../components/inkluderet.astro";
 import Fag from "../components/fag.astro";
-import SingleViewStats from "../components/singleView_stats.astro";
+import SingleViewStatus from "../components/singleView_status.astro";
 ---
 
 <MainLayout title="Komponentbibliotek">
@@ -252,11 +252,14 @@ import SingleViewStats from "../components/singleView_stats.astro";
     <Heading htmlheading="h2" weight="medium">Single Page components</Heading>
 
     <div>
+      
       <!-- Besked til Nicolai -->
         <Heading htmlheading="h5">Jeg har smidt en overflow-clip på containeren, så den ikke går ud over siden og gør den længere. Men mine problemer her er:</Heading>
         <Heading htmlheading="h8">Elementerne i child divene er ikke centreret - Den sekundær tekst er ikke orange</Heading>
+        <br><br>
         <Heading htmlheading="h5">UPDATE: Jeg fik fixet at tingene går ud over containeren ved at give den en mindre gap, men hvis den får sin originale gap går den ud over containeren igen, så det er kun et midlertidigt løsning. Men tror det er pga at der er en max-width eller noget lignene på hele denne her side?</Heading>
-      <SingleViewStats />
+        <br>
+        <SingleViewStatus />
     </div>
 
   </section>
