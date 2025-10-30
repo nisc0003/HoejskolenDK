@@ -12,6 +12,7 @@ import Overblik from "../components/overblik.astro";
 import Program from "../components/program.astro";
 import Inkluderet from "../components/inkluderet.astro";
 import Fag from "../components/fag.astro";
+import SingleViewStats from "../components/singleView_stats.astro";
 ---
 
 <MainLayout title="Komponentbibliotek">
@@ -209,8 +210,13 @@ import Fag from "../components/fag.astro";
     <section class="space-y-4">
       <Heading htmlheading="h2" weight="medium">Cards</Heading>
       <div class="flex flex-col gap-4">
+        <!-- Besked til Nicolai -->
+        <Heading htmlheading="h7">Højden og bredden af cardet er SATTE tal, ikke responsive, har puttet en margin-top og bottom på titlen så den ikker clasher med billedet</Heading>
+        <Heading htmlheading="h8">Knappen skal lige fixes med hvor billedet bliver sat på</Heading>
         <Card2LUN />
         <Card3LUN />
+        <!-- Besked til Nicolai -->
+        <Heading htmlheading="h8">Hvordan gør jeg teksten hvid lol</Heading>
         <Card_BLOG />
       </div>
     </section>
@@ -221,6 +227,8 @@ import Fag from "../components/fag.astro";
            <!-- Navigation -->
     <section class="space-y-4">
       <Heading htmlheading="h2" weight="medium">Navigation menus</Heading>
+              <!-- Besked til Nicolai -->
+        <Heading htmlheading="h8">Vil gerne gøre den vandret uden at den skubber til siden men beholder denne her bredde den har nu</Heading>
       <SingleNAV />
     </section>
     </div>
@@ -236,7 +244,23 @@ import Fag from "../components/fag.astro";
     <Fag />
     </div>
   </section>
-    
+
+              <!-- <hr class="border-gray-300 h-min-100" /> -->
+
+      <!-- Single Page Components -->
+  <section class="space-y-10">  
+    <Heading htmlheading="h2" weight="medium">Single Page components</Heading>
+
+    <div>
+      <!-- Besked til Nicolai -->
+        <Heading htmlheading="h5">Jeg har smidt en overflow-clip på containeren, så den ikke går ud over siden og gør den længere. Men mine problemer her er:</Heading>
+        <Heading htmlheading="h8">Elementerne i child divene er ikke centreret - Den sekundær tekst er ikke orange</Heading>
+        <Heading htmlheading="h5">UPDATE: Jeg fik fixet at tingene går ud over containeren ved at give den en mindre gap, men hvis den får sin originale gap går den ud over containeren igen, så det er kun et midlertidigt løsning. Men tror det er pga at der er en max-width eller noget lignene på hele denne her side?</Heading>
+      <SingleViewStats />
+    </div>
+
+  </section>
+
 
   </main>
 </MainLayout>
