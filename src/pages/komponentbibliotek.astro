@@ -13,6 +13,8 @@ import Program from "../components/program.astro";
 import Inkluderet from "../components/inkluderet.astro";
 import Fag from "../components/fag.astro";
 import SingleViewStatus from "../components/singleView_status.astro";
+import Blog from "../components/Blog.astro";
+import CTA from "../components/CTA.astro";
 ---
 
 <MainLayout title="Komponentbibliotek">
@@ -245,7 +247,16 @@ import SingleViewStatus from "../components/singleView_status.astro";
     </div>
   </section>
 
-              <!-- <hr class="border-gray-300 h-min-100" /> -->
+              <hr class="border-gray-300 h-min-100" />
+
+      <!-- FRONT/INDEX Components -->
+       <section class="space-y-10">
+        <Heading htmlheading="h2" weight="medium"> FRONT/INDEX Components</Heading>
+        <div>
+          <CTA/>
+        </div>
+
+       </section>
 
       <!-- Single Page Components -->
   <section class="space-y-10">  
@@ -261,6 +272,9 @@ import SingleViewStatus from "../components/singleView_status.astro";
         <br>
         <SingleViewStatus />
     </div>
+
+    <Blog />
+    
 
   </section>
 
