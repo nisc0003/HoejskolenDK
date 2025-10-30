@@ -4,6 +4,7 @@ import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
 import Card2LUN from "../components/Card2_LUN.astro";
 import Card3LUN from "../components/Card3_LUN.astro";
 import Card_BLOG from "../components/Card_BLOG.astro";
@@ -151,7 +152,6 @@ import SingleNAV from "../components/single_NAV.astro";
         <Button variant="card_btn" size="large">Card BTN</Button>
         <Button variant="number_btn" size="medium">i</Button>
 
-
         <!-- <Button variant="primary" size="small" class:list={[borderRadiusClasses["small"]]}>Rounded small</Button>
         <Button variant="primary" size="medium" class:list={[borderRadiusClasses["medium"]]}>Rounded medium</Button>
         <Button variant="primary" size="large" class:list={[borderRadiusClasses["large"]]}>Rounded large</Button> -->
@@ -163,33 +163,54 @@ import SingleNAV from "../components/single_NAV.astro";
     <!-- Colors -->
     <section class="space-y-4">
       <Heading htmlheading="h2" weight="medium">Colors</Heading>
-          <hr class="border-gray-300" />
+      <hr class="border-gray-300" />
       <div class="flex flex-wrap gap-4">
-        <Heading htmlheading="h2" weight="medium">Primary colors variants</Heading>
-        <div class="bg-primary h-auto w-auto"> <Heading htmlheading="h1">Primary:#ff5900</Heading></div>
-        <div class="bg-primary-muted h-auto w-auto"> <Heading htmlheading="h2">Primary-muted:#ffc39b</Heading></div>
-        <div class="bg-primary-see-thru h-auto w-auto"> <Heading htmlheading="h3">Primary-see-thru:rgba(255, 89, 0, 0.5)</Heading></div>
+        <Heading htmlheading="h2" weight="medium"
+          >Primary colors variants</Heading
+        >
+        <div class="bg-primary h-auto w-auto">
+          <Heading htmlheading="h1">Primary:#ff5900</Heading>
+        </div>
+        <div class="bg-primary-muted h-auto w-auto">
+          <Heading htmlheading="h2">Primary-muted:#ffc39b</Heading>
+        </div>
+        <div class="bg-primary-see-thru h-auto w-auto">
+          <Heading htmlheading="h3"
+            >Primary-see-thru:rgba(255, 89, 0, 0.5)</Heading
+          >
+        </div>
       </div>
-    <hr class="border-gray-300" />
+      <hr class="border-gray-300" />
       <div class="flex flex-wrap gap-4">
-        <Heading htmlheading="h2" weight="medium">Secondary colors variants</Heading>
-        <div class="bg-secondary h-auto w-auto"> <Heading htmlheading="h1">Secondary:#00bfff</Heading></div>
-        <div class="bg-secondary-muted h-auto w-auto"> <Heading htmlheading="h2">Secondary-muted:#99ccff</Heading></div>
+        <Heading htmlheading="h2" weight="medium"
+          >Secondary colors variants</Heading
+        >
+        <div class="bg-secondary h-auto w-auto">
+          <Heading htmlheading="h1">Secondary:#00bfff</Heading>
+        </div>
+        <div class="bg-secondary-muted h-auto w-auto">
+          <Heading htmlheading="h2">Secondary-muted:#99ccff</Heading>
+        </div>
       </div>
-    <hr class="border-gray-300" />
+      <hr class="border-gray-300" />
       <div class="flex flex-wrap gap-4">
         <Heading htmlheading="h2" weight="medium">Color for text</Heading>
-        <div class="bg-background h-auto w-auto"> <Heading htmlheading="h1">Color background:#f6f3ea</Heading></div>
-        <div class="bg-black h-auto w-auto"> <Heading htmlheading="h2">Black text:#191919</Heading></div>
-        <div class="bg-white h-auto w-auto"> <Heading htmlheading="h3">White text:#fbfbff</Heading></div>
+        <div class="bg-background h-auto w-auto">
+          <Heading htmlheading="h1">Color background:#f6f3ea</Heading>
+        </div>
+        <div class="bg-black h-auto w-auto">
+          <Heading htmlheading="h2">Black text:#191919</Heading>
+        </div>
+        <div class="bg-white h-auto w-auto">
+          <Heading htmlheading="h3">White text:#fbfbff</Heading>
+        </div>
       </div>
-          <hr class="border-gray-300" />
+      <hr class="border-gray-300" />
 
-          <div> </div>
-
+      <div></div>
     </section>
 
-        <!-- Typography -->
+    <!-- Typography -->
     <section class="space-y-4">
       <Heading htmlheading="h2" weight="medium">Typography</Heading>
       <div class="flex flex-col gap-4">
@@ -199,24 +220,24 @@ import SingleNAV from "../components/single_NAV.astro";
         <p class="font-condensed">Font: Roboto Condensed</p>
       </div>
     </section>
-        <hr class="border-gray-300" />
-        <!-- Cards -->
+    <hr class="border-gray-300" />
+    <!-- Cards -->
     <section class="space-y-4">
       <Heading htmlheading="h2" weight="medium">Cards</Heading>
       <div class="flex flex-col gap-4">
+        <Card />
         <Card2LUN />
         <Card3LUN />
         <Card_BLOG />
       </div>
     </section>
 
-        <hr class="border-gray-300" />
+    <hr class="border-gray-300" />
 
-           <!-- Navigation -->
+    <!-- Navigation -->
     <section class="space-y-4">
       <Heading htmlheading="h2" weight="medium">Navigation menus</Heading>
       <SingleNAV />
     </section>
-
   </main>
 </MainLayout>

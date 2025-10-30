@@ -1,0 +1,163 @@
+---
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+---
+
+<div
+  class="bg-[#FBFBFF] rounded-xl p-4 md:p-6 flex flex-col gap-4 w-full max-w-180"
+  x-data="{ showList: false }"
+>
+  <!-- Header with Title and Flip Icon -->
+  <div class="flex items-center justify-between gap-4">
+    <Heading htmlheading="h5">
+      Højskole i Brasilien, Colombia, Costa Rica & Mexico
+    </Heading>
+    <button @click="showList = !showList" class="flex-shrink-0">
+      <img
+        src="/src/assets/images/flip.svg"
+        alt="Toggle view"
+        width="40"
+        height="40"
+        class="cursor-pointer hover:opacity-80 transition-opacity"
+      />
+    </button>
+  </div>
+
+  <!-- Image / Destination List Toggle -->
+  <div class="w-full rounded-2xl overflow-hidden">
+    <img
+      src="/src/assets/images/rejse.jpg"
+      alt="Travel destination"
+      class="w-full h-auto aspect-[35/22] object-cover"
+      x-show="!showList"
+      x-transition
+    />
+
+    <div x-show="showList" x-transition class="bg-white p-4 min-h-[15rem]">
+      <div class="space-y-2">
+        <div>
+          <Text type="body_1" weight="bold" stylingclasses="uppercase"
+            >INTRODAGE:</Text
+          >
+          <Text type="body_2">Dubai/Doha/Bangkok/Singapore</Text>
+        </div>
+
+        <div>
+          <Text type="body_1" weight="bold" stylingclasses="uppercase"
+            >MALDIVERNE:</Text
+          >
+          <Text type="body_2">Dhiffushi</Text>
+        </div>
+
+        <div>
+          <Text type="body_1" weight="bold" stylingclasses="uppercase"
+            >SRI LANKA:</Text
+          >
+          <Text type="body_2">Dambulla, Kandy, Ella & Weligama</Text>
+        </div>
+
+        <div>
+          <Text type="body_1" weight="bold" stylingclasses="uppercase"
+            >INDONESIEN:</Text
+          >
+          <Text type="body_2">Bali & Gili Islands</Text>
+        </div>
+
+        <div>
+          <Text type="body_1" weight="bold" stylingclasses="uppercase"
+            >JAPAN:</Text
+          >
+          <Text type="body_2">Tokyo, Kyoto, Hiroshima, Osak & Nara</Text>
+        </div>
+
+        <div>
+          <Text type="body_1" weight="bold" stylingclasses="uppercase"
+            >AUSTRALIEN:</Text
+          >
+          <Text type="body_2">Byron Bay</Text>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Duration -->
+  <div>
+    <Text stylingclasses="text-lg font-medium">Varighed: ca. 60 dage</Text>
+  </div>
+
+  <!-- Grid Board: Status, Departure, Price with aligned rows -->
+  <div class="grid grid-cols-3 gap-x-4 gap-y-3">
+    <!-- Headers Row -->
+    <Text type="body_1" stylingclasses="text-left">Status</Text>
+    <Text type="body_1" stylingclasses="text-center">AFREJSE</Text>
+    <Text type="body_1" stylingclasses="text-right">PRIS</Text>
+
+    <!-- Row 1 -->
+    <div class="flex items-center gap-2 justify-start">
+      <img
+        src="/src/assets/images/orange.svg"
+        alt=""
+        class="w-4 h-4 flex-shrink-0"
+      />
+      <Text type="body2">Sidste chance!</Text>
+    </div>
+    <Text type="body2" stylingclasses="text-center">17. Jan 2026</Text>
+    <Text type="body2" stylingclasses="text-right">86.000DKK</Text>
+
+    <!-- Row 2 -->
+    <div class="flex items-center gap-2 justify-start">
+      <img
+        src="/src/assets/images/green.svg"
+        alt=""
+        class="w-4 h-4 flex-shrink-0"
+      />
+      <Text type="body2">Ledige pladser</Text>
+    </div>
+    <Text type="body2" stylingclasses="text-center">7. Jan 2027</Text>
+    <Text type="body2" stylingclasses="text-right">87.000DKK</Text>
+
+    <!-- Row 3 -->
+    <div class="flex items-center gap-2 justify-start">
+      <img
+        src="/src/assets/images/green.svg"
+        alt=""
+        class="w-4 h-4 flex-shrink-0"
+      />
+      <Text type="body2">Ledige pladser</Text>
+    </div>
+    <Text type="body2" stylingclasses="text-center">22. Feb 2027</Text>
+    <Text type="body2" stylingclasses="text-right">88.000DKK</Text>
+
+    <!-- Row 4 -->
+    <div class="flex items-center gap-2 justify-start">
+      <img
+        src="/src/assets/images/green.svg"
+        alt=""
+        class="w-4 h-4 flex-shrink-0"
+      />
+      <Text type="body2">Ledige pladser</Text>
+    </div>
+    <Text type="body2" stylingclasses="text-center">14 April 2027</Text>
+    <Text type="body2" stylingclasses="text-right">89.999DKK</Text>
+  </div>
+
+  <!-- Spacer to push button down -->
+  <div class="flex-grow"></div>
+
+  <!-- Read More Button - Full Width -->
+  <Link
+    variant="card_btn"
+    size="large"
+    stylingclasses="w-full flex justify-between"
+  >
+    <Text>Læs mere</Text>
+    <img src="/src/assets/images/nextArrow.svg" alt="" class="w-5 h-5" />
+  </Link>
+</div>
+
+<script>
+  import Alpine from "alpinejs";
+  Alpine.start();
+</script>
