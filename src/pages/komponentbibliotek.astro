@@ -4,7 +4,6 @@ import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
-import Card from "../components/Card.astro";
 import Card2LUN from "../components/Card2_LUN.astro";
 import Card3LUN from "../components/Card3_LUN.astro";
 import Card_BLOG from "../components/Card_BLOG.astro";
@@ -229,10 +228,19 @@ import SD from "../components/S&D.astro";
       </div>
     </section>
     <hr class="border-gray-300" />
+
     <!-- Cards -->
     <section class="space-y-4">
       <Heading htmlheading="h2" weight="medium">Cards</Heading>
       <div class="flex flex-col gap-4">
+        <!-- Besked til Nicolai -->
+        <Heading htmlheading="h7"
+          >Højden og bredden af cardet er SATTE tal, ikke responsive, har puttet
+          en margin-top og bottom på titlen så den ikker clasher med billedet</Heading
+        >
+        <Heading htmlheading="h8"
+          >Knappen skal lige fixes med hvor billedet bliver sat på</Heading
+        >
         <Card2LUN />
         <Card3LUN />
         <!-- Besked til Nicolai -->
@@ -243,15 +251,71 @@ import SD from "../components/S&D.astro";
 
     <hr class="border-gray-300" />
 
-    <!-- Navigation -->
-    <section class="space-y-4">
-      <Heading htmlheading="h2" weight="medium">Navigation menus</Heading>
-      <!-- Besked til Nicolai -->
-      <Heading htmlheading="h8"
-        >Vil gerne gøre den vandret uden at den skubber til siden men beholder
-        denne her bredde den har nu</Heading
+    <div class="grid">
+      <!-- Navigation -->
+      <section class="space-y-4">
+        <Heading htmlheading="h2" weight="medium">Navigation menus</Heading>
+        <!-- Besked til Nicolai -->
+        <Heading htmlheading="h8"
+          >Vil gerne gøre den vandret uden at den skubber til siden men beholder
+          denne her bredde den har nu</Heading
+        >
+        <SingleNAV />
+      </section>
+    </div>
+    <hr class="border-gray-300 h-min-100" />
+
+    <!-- Single Nav components -->
+    <section class="space-y-10">
+      <Heading htmlheading="h2" weight="medium">Single Nav components</Heading>
+      <div>
+        <Overblik />
+        <Program />
+        <Inkluderet />
+        <Fag />
+      </div>
+    </section>
+
+    <hr class="border-gray-300 h-min-100" />
+
+    <!-- FRONT/INDEX Components -->
+    <section class="space-y-10">
+      <Heading htmlheading="h2" weight="medium">
+        FRONT/INDEX Components</Heading
       >
-      <SingleNAV />
+      <div>
+        <CTA />
+        <Blog />
+      </div>
+    </section>
+
+    <!-- Single Page Components -->
+    <section class="space-y-10">
+      <Heading htmlheading="h2" weight="medium">Single Page components</Heading>
+
+      <div>
+        <!-- Besked til Nicolai -->
+        <Heading htmlheading="h5"
+          >Jeg har smidt en overflow-clip på containeren, så den ikke går ud
+          over siden og gør den længere. Men mine problemer her er:</Heading
+        >
+        <Heading htmlheading="h8"
+          >Elementerne i child divene er ikke centreret - Den sekundær tekst er
+          ikke orange</Heading
+        >
+        <br /><br />
+        <Heading htmlheading="h5"
+          >UPDATE: Jeg fik fixet at tingene går ud over containeren ved at give
+          den en mindre gap, men hvis den får sin originale gap går den ud over
+          containeren igen, så det er kun et midlertidigt løsning. Men tror det
+          er pga at der er en max-width eller noget lignene på hele denne her
+          side?</Heading
+        >
+        <br />
+        <SingleViewStatus />
+      </div>
+
+      <SD />
     </section>
   </main>
 </MainLayout>
