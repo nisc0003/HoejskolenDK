@@ -1,0 +1,69 @@
+---
+import Heading from "./Heading.astro";
+import Text from "./Text.astro";
+import Button from "./Button.astro";
+---
+
+<!-- IGEN ml-65 som midlertigig løsning -->
+<section class="flex flex-row ml-65 gap-50 mt-75">
+  <div>
+    <Heading htmlheading="h5">INFOMØDER</Heading>
+    <br /><br />
+    <Text
+      >Kig forbi et af vores hyggelige infomøder i
+      <br />
+      København, Aarhus eller online vi glæder os til at møde dig!</Text
+    >
+    <Button>BOOK MØDE</Button>
+  </div>
+
+  <section class="flex flex-row gap-20">
+    <div>
+      <div class="mb-20">
+        <div class="opacity-25">
+          <Text>Studenterhuset</Text>
+        </div>
+        <Heading htmlheading="h7">KØBENHAVN</Heading>
+        <Text
+          >18 November 2025
+          <br />
+          KL 17-19
+        </Text>
+      </div>
+
+      <div>
+        <div class="opacity-25">
+          <Text>LYNFabrikken</Text>
+        </div>
+        <Heading htmlheading="h7">AARHUS</Heading>
+        <Text
+          >06 November 2025
+          <br />
+          KL 17-19
+        </Text>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <div class="opacity-25">
+          <Text>Microsoft Teams</Text>
+        </div>
+        <Heading htmlheading="h7">ONLINE</Heading>
+        <Text
+          >12 November 2025
+          <br />
+          KL 17-19
+        </Text>
+
+        <div class="mt-7">
+          <Text
+            >10 December 2025
+            <br />
+            KL 17-19
+          </Text>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
