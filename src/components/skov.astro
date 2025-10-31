@@ -1,0 +1,28 @@
+---
+import Heading from "./Heading.astro";
+import Text from "./Text.astro";
+import Button from "./Button.astro";
+---
+
+<!-- Jeg er så lost med ml... -->
+<section class="grid grid-cols-2 ml-65 mt-85 gap-25">
+  <div class="flex flex-col justify-between w-175">
+    <Heading htmlheading="h2">VORES BIDRAG</Heading>
+    <Text
+      >“If you think you’re too small to make a difference, you haven’t spent a
+      night with a mosquito.”
+      <br /><br />
+      For os handler det om holdning og handling. Vi tager ansvar som højskole og
+      forholder os aktivt til vores aftryk – positivt som negativt – så vi er med
+      til at skabe bæredygtig turisme i dag, i morgen og i fremtiden.
+      <br /><br />
+      Vi er stolte af at kunne sige, at vi allerede har fredet 106.785 m2 regenskov.
+    </Text>
+
+    <Button variant="primary" size="small">LÆS MERE</Button>
+  </div>
+
+  <div class="object-fill">
+    <img src="/src/assets/images/skov.png" alt="" />
+  </div>
+</section>
