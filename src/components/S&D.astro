@@ -1,16 +1,149 @@
 ---
-import Card2LUN from "./Card2_LUN.astro"
-import Card3LUN from "./Card3_LUN.astro"
-import Button from "./Button.astro" 
+import Card from "./Card.astro";
 ---
 
 <section class="grid">
+  <div class="flex flex-row justify-between mr-20 ml-20 gap-6 mt-10 z-2">
+    <Card
+      title="Højskole i Brasilien, Colombia, Costa Rica & Mexico"
+      image="/src/assets/images/rejse.jpg"
+      imageAlt="Travel destination"
+      destinations={[
+        { label: "INTRODAGE", locations: "Dubai/Doha/Bangkok/Singapore" },
+        { label: "MALDIVERNE", locations: "Dhiffushi" },
+        { label: "SRI LANKA", locations: "Dambulla, Kandy, Ella & Weligama" },
+        { label: "INDONESIEN", locations: "Bali & Gili Islands" },
+        { label: "JAPAN", locations: "Tokyo, Kyoto, Hiroshima, Osak & Nara" },
+        { label: "AUSTRALIEN", locations: "Byron Bay" },
+      ]}
+      duration="Varighed: ca. 60 dage"
+      departures={[
+        {
+          status: "last_chance",
+          statusText: "Sidste chance!",
+          statusIcon: "/src/assets/images/orange.svg",
+          date: "17. Jan 2026",
+          price: "86.000DKK",
+        },
+        {
+          status: "available",
+          statusText: "Ledige pladser",
+          statusIcon: "/src/assets/images/green.svg",
+          date: "7. Jan 2027",
+          price: "87.000DKK",
+        },
+        {
+          status: "available",
+          statusText: "Ledige pladser",
+          statusIcon: "/src/assets/images/green.svg",
+          date: "22. Feb 2027",
+          price: "88.000DKK",
+        },
+        {
+          status: "available",
+          statusText: "Ledige pladser",
+          statusIcon: "/src/assets/images/green.svg",
+          date: "14 April 2027",
+          price: "89.999DKK",
+        },
+      ]}
+      link="#"
+    />
+    <Card
+      title="Højskole i Brasilien, Colombia, Costa Rica & Mexico"
+      image="/src/assets/images/rejse.jpg"
+      imageAlt="Travel destination"
+      destinations={[
+        { label: "INTRODAGE", locations: "Dubai/Doha/Bangkok/Singapore" },
+        { label: "MALDIVERNE", locations: "Dhiffushi" },
+        { label: "SRI LANKA", locations: "Dambulla, Kandy, Ella & Weligama" },
+        { label: "INDONESIEN", locations: "Bali & Gili Islands" },
+        { label: "JAPAN", locations: "Tokyo, Kyoto, Hiroshima, Osak & Nara" },
+        { label: "AUSTRALIEN", locations: "Byron Bay" },
+      ]}
+      duration="Varighed: ca. 60 dage"
+      departures={[
+        {
+          status: "last_chance",
+          statusText: "Sidste chance!",
+          statusIcon: "/src/assets/images/orange.svg",
+          date: "17. Jan 2026",
+          price: "86.000DKK",
+        },
+        {
+          status: "available",
+          statusText: "Ledige pladser",
+          statusIcon: "/src/assets/images/green.svg",
+          date: "7. Jan 2027",
+          price: "87.000DKK",
+        },
+        {
+          status: "available",
+          statusText: "Ledige pladser",
+          statusIcon: "/src/assets/images/green.svg",
+          date: "22. Feb 2027",
+          price: "88.000DKK",
+        },
+        {
+          status: "available",
+          statusText: "Ledige pladser",
+          statusIcon: "/src/assets/images/green.svg",
+          date: "14 April 2027",
+          price: "89.999DKK",
+        },
+      ]}
+      link="#"
+    />
+    <Card
+      title="Højskole i Brasilien, Colombia, Costa Rica & Mexico"
+      image="/src/assets/images/rejse.jpg"
+      imageAlt="Travel destination"
+      destinations={[
+        { label: "INTRODAGE", locations: "Dubai/Doha/Bangkok/Singapore" },
+        { label: "MALDIVERNE", locations: "Dhiffushi" },
+        { label: "SRI LANKA", locations: "Dambulla, Kandy, Ella & Weligama" },
+        { label: "INDONESIEN", locations: "Bali & Gili Islands" },
+        { label: "JAPAN", locations: "Tokyo, Kyoto, Hiroshima, Osak & Nara" },
+        { label: "AUSTRALIEN", locations: "Byron Bay" },
+      ]}
+      duration="Varighed: ca. 60 dage"
+      departures={[
+        {
+          status: "last_chance",
+          statusText: "Sidste chance!",
+          statusIcon: "/src/assets/images/orange.svg",
+          date: "17. Jan 2026",
+          price: "86.000DKK",
+        },
+        {
+          status: "available",
+          statusText: "Ledige pladser",
+          statusIcon: "/src/assets/images/green.svg",
+          date: "7. Jan 2027",
+          price: "87.000DKK",
+        },
+        {
+          status: "available",
+          statusText: "Ledige pladser",
+          statusIcon: "/src/assets/images/green.svg",
+          date: "22. Feb 2027",
+          price: "88.000DKK",
+        },
+        {
+          status: "available",
+          statusText: "Ledige pladser",
+          statusIcon: "/src/assets/images/green.svg",
+          date: "14 April 2027",
+          price: "89.999DKK",
+        },
+      ]}
+      link="#"
+    />
+  </div>
 
-    <div class="flex flex-row justify-between mr-20 ml-20 gap-6 mt-10 z-2">
-        <Card2LUN />
-        <Card2LUN />
-        <Card2LUN />
-    </div>
-
-        <img src="/src/assets/images/5th_element_blue.svg" alt="" class="z-1 object absolute">
+  <img
+    src="/src/assets/images/5th_element_blue.svg"
+    alt=""
+    class="z-1 object absolute"
+  />
 </section>

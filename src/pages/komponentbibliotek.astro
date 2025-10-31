@@ -4,8 +4,8 @@ import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
-import Card2LUN from "../components/Card2_LUN.astro";
-import Card3LUN from "../components/Card3_LUN.astro";
+import Card from "../components/Card.astro";
+import Card2 from "../components/Card2.astro";
 import Card_BLOG from "../components/Card_BLOG.astro";
 import SingleNAV from "../components/single_NAV.astro";
 import Overblik from "../components/overblik.astro";
@@ -241,8 +241,57 @@ import SD from "../components/S&D.astro";
         <Heading htmlheading="h8"
           >Knappen skal lige fixes med hvor billedet bliver sat på</Heading
         >
-        <Card2LUN />
-        <Card3LUN />
+        <Card
+          title="Højskole i Brasilien, Colombia, Costa Rica & Mexico"
+          image="/src/assets/images/rejse.jpg"
+          imageAlt="Travel destination"
+          destinations={[
+            { label: "INTRODAGE", locations: "Dubai/Doha/Bangkok/Singapore" },
+            { label: "MALDIVERNE", locations: "Dhiffushi" },
+            {
+              label: "SRI LANKA",
+              locations: "Dambulla, Kandy, Ella & Weligama",
+            },
+            { label: "INDONESIEN", locations: "Bali & Gili Islands" },
+            {
+              label: "JAPAN",
+              locations: "Tokyo, Kyoto, Hiroshima, Osak & Nara",
+            },
+            { label: "AUSTRALIEN", locations: "Byron Bay" },
+          ]}
+          duration="Varighed: ca. 60 dage"
+          departures={[
+            {
+              status: "last_chance",
+              statusText: "Sidste chance!",
+              statusIcon: "/src/assets/images/orange.svg",
+              date: "17. Jan 2026",
+              price: "86.000DKK",
+            },
+            {
+              status: "available",
+              statusText: "Ledige pladser",
+              statusIcon: "/src/assets/images/green.svg",
+              date: "7. Jan 2027",
+              price: "87.000DKK",
+            },
+            {
+              status: "available",
+              statusText: "Ledige pladser",
+              statusIcon: "/src/assets/images/green.svg",
+              date: "22. Feb 2027",
+              price: "88.000DKK",
+            },
+            {
+              status: "available",
+              statusText: "Ledige pladser",
+              statusIcon: "/src/assets/images/green.svg",
+              date: "14 April 2027",
+              price: "89.999DKK",
+            },
+          ]}
+          link="#"
+        />
         <!-- Besked til Nicolai -->
         <Heading htmlheading="h8">Hvordan gør jeg teksten hvid lol</Heading>
         <Card_BLOG />
