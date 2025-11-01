@@ -1,8 +1,65 @@
 ---
-import Text from "./Text.astro"
-
+import Text from "./Text.astro";
 ---
 
+<section>
+  <div class="grid grid-cols-3 gap-x-4 gap-y-3">
+    <!-- Headers Row -->
+    <Text type="body_1" stylingclasses="text-left">Status</Text>
+    <Text type="body_1" stylingclasses="text-center">AFREJSE</Text>
+    <Text type="body_1" stylingclasses="text-right">PRIS</Text>
+
+    <!-- Row 1 -->
+    <div class="flex items-center gap-2 justify-start">
+      <img
+        src="/src/assets/images/orange.svg"
+        alt=""
+        class="w-4 h-4 flex-shrink-0"
+      />
+      <Text type="body2">Sidste chance!</Text>
+    </div>
+    <Text type="body2" stylingclasses="text-center">17. Jan 2026</Text>
+    <Text type="body2" stylingclasses="text-right">86.000DKK</Text>
+
+    <!-- Row 2 -->
+    <div class="flex items-center gap-2 justify-start">
+      <img
+        src="/src/assets/images/green.svg"
+        alt=""
+        class="w-4 h-4 flex-shrink-0"
+      />
+      <Text type="body2">Ledige pladser</Text>
+    </div>
+    <Text type="body2" stylingclasses="text-center">7. Jan 2027</Text>
+    <Text type="body2" stylingclasses="text-right">87.000DKK</Text>
+
+    <!-- Row 3 -->
+    <div class="flex items-center gap-2 justify-start">
+      <img
+        src="/src/assets/images/green.svg"
+        alt=""
+        class="w-4 h-4 flex-shrink-0"
+      />
+      <Text type="body2">Ledige pladser</Text>
+    </div>
+    <Text type="body2" stylingclasses="text-center">22. Feb 2027</Text>
+    <Text type="body2" stylingclasses="text-right">88.000DKK</Text>
+
+    <!-- Row 4 -->
+    <div class="flex items-center gap-2 justify-start">
+      <img
+        src="/src/assets/images/green.svg"
+        alt=""
+        class="w-4 h-4 flex-shrink-0"
+      />
+      <Text type="body2">Ledige pladser</Text>
+    </div>
+    <Text type="body2" stylingclasses="text-center">14 April 2027</Text>
+    <Text type="body2" stylingclasses="text-right">89.999DKK</Text>
+  </div>
+</section>
+
+<!-- 
 <section class="flex3_info">
     <div class="status">
       <Text type="body_1">Status</Text>
@@ -81,4 +138,4 @@ import Text from "./Text.astro"
     gap: 6px;
     align-self: stretch;
   }
-</style>
+</style> -->
