@@ -2,7 +2,7 @@
 import Button from "./Button.astro";
 ---
 
-<section class="flex flex-col mt-50">
+<section class="inView galleryinview flex flex-col mt-50">
   <img
     src="/src/assets/images/pol.png"
     alt=""
@@ -12,3 +12,19 @@ import Button from "./Button.astro";
     <Button variant="primary" size="medium">SE BILLEDER</Button>
   </div>
 </section>
+
+
+
+<script>
+	/* Import af Motion One bibliotek */
+	import { animate, stagger, inView, scroll } from "motion";
+
+inView( ".galleryinview" , () =>{
+	animate( ".galleryinview", { opacity: [0, 100 ] }, { duration: 3 })
+	})
+
+  inView( ".galleryinview" , () =>{
+	animate( ".galleryinview", { y: [100, 0 ] }, { duration: 1 })
+	})
+
+	</script>

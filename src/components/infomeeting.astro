@@ -17,7 +17,7 @@ import Button from "./Button.astro";
     <Button>BOOK MØDE</Button>
   </div>
 
-  <section class="flex flex-row gap-20">
+  <section class="flex flex-row gap-20 meetingInView">
     <div>
       <div class="mb-20">
         <div class="opacity-25">
@@ -67,3 +67,17 @@ import Button from "./Button.astro";
     </div>
   </section>
 </section>
+
+<script>
+	/* Import af Motion One bibliotek */
+	import { animate, stagger, inView, scroll } from "motion";
+
+inView( ".meetingInView" , () =>{
+	animate( ".meetingInView", { opacity: [0, 100 ] }, { duration: 2 })
+	})
+
+  inView( ".meetingInView" , () =>{
+	animate( ".meetingInView", { x: [100, 0 ] }, { duration: 1 })
+	})
+
+	</script>

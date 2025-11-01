@@ -4,7 +4,7 @@ import Heading from "./Heading.astro";
 ---
 
 <!-- ML-100 er en midlertiglid løsning fordi jeg kan ikke bruge ml-auto mr-auto ?? -->
-<section class="flex flex-row gap-50 mt-75 ml-87">
+<section class="flex flex-row gap-50 mt-75 ml-87 TrustPilotInView">
   <div
     class="flex flex-col items-center-safe bg-secondary-muted w-100 p-10 rounded-2xl"
   >
@@ -55,3 +55,17 @@ import Heading from "./Heading.astro";
     </div>
   </div>
 </section>
+
+<script>
+	/* Import af Motion One bibliotek */
+	import { animate, stagger, inView, scroll } from "motion";
+
+inView( ".TrustPilotInView" , () =>{
+	animate( ".TrustPilotInView", { opacity: [0, 100 ] }, { duration: 2 })
+	})
+
+  inView( ".TrustPilotInView" , () =>{
+	animate( ".TrustPilotInView", { y: [100, 0 ] }, { duration: 1 })
+	})
+
+	</script>

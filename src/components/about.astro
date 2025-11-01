@@ -7,7 +7,7 @@ import Button from "./Button.astro";
 <section class="grid grid-cols-2 gap-50">
   <img src="/src/assets/images/about.png" alt="" class="ml-auto h-full" />
 
-  <div class="w-150">
+  <div class="w-150 aboutInView">
     <Heading htmlheading="h3">DIT LIVS EVENTYR</Heading>
     <Text type="body_2"
       >HÖJSKOLENDK er en dansk højskole for unge i alderen ca. 18-30 år.
@@ -16,7 +16,7 @@ import Button from "./Button.astro";
       derfor laver vi eventyrlige højskoleophold i udlandet.
     </Text>
 
-    <div class="bg-primary-muted rounded-2xl p-7">
+    <div class="bg-primary-muted rounded-2xl p-7 aboutInView">
       <Text type="body_2"
         >HÖJSKOLENDK er noget for dig, hvis du vil på højskole i udlandet og er
         vild med højskolefællesskab, vil med på et fantastisk rejseeventyr,
@@ -30,3 +30,17 @@ import Button from "./Button.astro";
     <Button variant="primary" size="medium">DIT LIVS EVETYR</Button>
   </div>
 </section>
+
+<script>
+	/* Import af Motion One bibliotek */
+	import { animate, stagger, inView, scroll } from "motion";
+	
+  inView( ".aboutInView" , () =>{
+	animate( ".aboutInView", { opacity: [0, 100 ] }, { duration: 2 })
+	})
+
+  inView( ".aboutInView" , () =>{
+	animate( ".aboutInView", { x: [1000, 0 ] }, { duration: 1 })
+	})
+  
+  </script>
