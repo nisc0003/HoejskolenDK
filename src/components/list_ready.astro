@@ -4,7 +4,7 @@ import Text from "./Text.astro";
 import Button from "./Button.astro";
 ---
 
-<section class="grid mr-auto ml-auto gap-10 text-center mb-100 w-400">
+<section class="grid mr-auto ml-auto gap-10 text-center mb-100 w-400 TrustPilotInView">
     <Heading htmlheading="h2">
     Føler du dig klar på et livs eventyr?
     </Heading>
@@ -15,3 +15,17 @@ Der bliver nemlig udsolgt på langt de fleste af vores ophold.</Text>
     <Button variant="primary" size="large">KIG PÅ OPHOLDENE</Button>
 
 </section>
+
+<script>
+	/* Import af Motion One bibliotek */
+	import { animate, stagger, inView, scroll } from "motion";
+
+inView( ".TrustPilotInView" , () =>{
+	animate( ".TrustPilotInView", { opacity: [0, 100 ] }, { duration: 2 })
+	})
+
+  inView( ".TrustPilotInView" , () =>{
+	animate( ".TrustPilotInView", { y: [100, 0 ] }, { duration: 1 })
+	})
+
+	</script>
